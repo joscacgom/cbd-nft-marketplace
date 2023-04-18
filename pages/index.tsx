@@ -8,6 +8,7 @@ import {
 } from "@thirdweb-dev/react";
 import { useRouter } from "next/router";
 import { marketplaceContractAddress } from "../addresses";
+import Spinner from "../components/Spinner";
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -17,23 +18,7 @@ const Home: NextPage = () => {
   return (
     <>
       <div className={styles.container}>
-        <h1 className={styles.h1}>NFT Marketplace w/ thirdweb + Next.JS</h1>
-        <p className={styles.explain}>
-          Build an NFT marketplace using{" "}
-          <b>
-            {" "}
-            <a
-              href="https://thirdweb.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.purple}
-            >
-              thirdweb
-            </a>
-          </b>{" "}
-          to list your ERC721 and ERC1155 tokens for auction or for direct sale.
-        </p>
-
+        <h1 className={styles.h1}>Buy and sell your NFT</h1>
         <hr className={styles.divider} />
 
         <div style={{ marginTop: 32, marginBottom: 32 }}>
@@ -45,7 +30,7 @@ const Home: NextPage = () => {
         <div className="main">
           {
             loadingListings ? (
-              <div>Loading listings...</div>
+              <Spinner width={"100px"} height="100px"></Spinner>
             ) : (
               <div className={styles.listingGrid}>
                 {listings?.map((listing) => (

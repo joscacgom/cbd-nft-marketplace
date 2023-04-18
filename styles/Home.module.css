@@ -4,6 +4,15 @@
   left: 5%;
 }
 
+.icon{
+  color:linear-gradient(to left, #cc25b3 0%, #74a2e7 101.52%);
+  cursor:pointer;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: fantasy;
+  text-decoration: none;
+}
+
 .btn {
   background-color: var(--tw-color1);
   outline: none;
@@ -78,12 +87,13 @@
 }
 
 .header {
-  background-color: #262936;
+  background-color: #ffffff;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 96px;
+  border-bottom: 1px solid #e5e5ea;
   margin-bottom: 96px;
   display: flex;
   flex-direction: row;
@@ -113,8 +123,28 @@
   cursor: pointer;
   text-align: center;
   padding: 5px;
-  color: #fff;
+  color: #000000;
   font-weight: 600;
+}
+.skeleton {
+  width: 100%;
+  background: linear-gradient(to right, #333 0%, #555 50%, #333 100%);
+  background-size: 400% 400%;
+  animation: pulse 1s ease-in-out infinite;
+  min-height: 12px;
+  max-height: 100%;
+  padding: 2px;
+  margin: 2px;
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: -135% 0%;
+  }
 }
 
 .mainButton {
@@ -142,7 +172,25 @@
   width: 180px;
   text-align: center;
   border-radius: 9999px;
+  animation: gradient 3s ease-in-out infinite;
+  background-size: 200% auto;
 }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 
 .mainButton:hover {
   opacity: 0.8;
@@ -197,7 +245,7 @@
 
 .name {
   font-size: 1.25rem;
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
@@ -223,7 +271,7 @@
   background-color: transparent;
   border: 1px solid grey;
   border-radius: 8px;
-  color: #fff;
+  color: #000;
   height: 48px;
   padding: 0 16px;
   font-size: 1rem;
@@ -254,7 +302,7 @@
 
 .listingShortView {
   border-radius: 20px;
-  border: rgba(255, 255, 255, 0.25) 1px solid;
+  border: rgba(0, 0, 0, 0.25) 1px solid;
   width: 24%;
   margin-top: 8px;
   cursor: pointer;
@@ -290,6 +338,7 @@
   border: 2px solid #444;
   border-radius: 4px;
   border-radius: 16px;
+  color:#fff;
   font-weight: 600;
   cursor: pointer;
 }
@@ -353,7 +402,6 @@
   justify-content: center;
 }
 
-/* On Mobile, change .listingContainer to be stacked vertically */
 @media screen and (max-width: 900px) {
   .listingContainer {
     flex-direction: column;

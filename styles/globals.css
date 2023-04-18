@@ -32,9 +32,9 @@ select {
 }
 
 body {
-  background: var(--black);
+  background: var(--white);
   font-family: "Inter", sans-serif;
-  color: var(--white);
+  color: var(--black);
   display: flex;
   margin: 0;
   text-align: center;
