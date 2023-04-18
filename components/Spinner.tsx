@@ -12,6 +12,7 @@ export default function Skeleton({ height, width }: Props) {
       style={{
         width,
         height,
+        marginTop: "10rem",
         borderRadius: "inherit",
       }}
       className={styles.skeleton}
