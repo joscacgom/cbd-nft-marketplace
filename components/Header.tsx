@@ -16,7 +16,13 @@ export default function Header() {
         </div>
       </div>
       <div className={styles.right}>
-          <ConnectWallet theme='dark' btnTitle="Connect Wallet" />
+        <Link style={{ textDecoration: 'none', color:'#9f2c9d', fontWeight:'600'}} href="/" passHref role="button">
+           Listing
+        </Link>
+        <Link style={{ textDecoration: 'none', color:'#9f2c9d', fontWeight:'600' }} href="/minting" passHref role="button">
+           Mint
+        </Link>
+          <ConnectWallet theme='light' btnTitle="Connect Wallet" />
       </div>
     </div>
   );

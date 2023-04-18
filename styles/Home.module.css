@@ -4,13 +4,14 @@
   left: 5%;
 }
 .icon {
-  color: linear-gradient(to left, #cc25b3 0%, #74a2e7 101.52%);
+  color: #9f2c9d;
   cursor: pointer;
   font-size: 36px;
-  font-weight: 400;
-  font-family: fantasy;
+  font-weight: 600;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-decoration: none;
 }
+
 
 .icon:visited {
   color: linear-gradient(to left, #cc25b3 0%, #74a2e7 101.52%);
@@ -120,6 +121,7 @@
   justify-content: center;
   flex-direction: row;
   margin-right: 5%;
+  gap: 2rem;
 }
 
 .secondaryButton {
@@ -133,7 +135,7 @@
   width: 100%;
   position : absolute;
   z-index: 1;
-  background: linear-gradient(to right, #333 0%, #555 50%, #333 100%);
+  background: linear-gradient(to left, #cc25b3 0%, #418dff 101.52%);
   background-size: 400% 400%;
   animation: pulse 1s ease-in-out infinite;
   margin: 0 auto;
@@ -203,6 +205,7 @@
 .ourCollection {
   font-size: 1.5rem;
   margin-bottom: 16px;
+  color:#9f2c9d;
 }
 
 .collectionContainer {
@@ -236,6 +239,7 @@
 
 .h1 {
   margin-bottom: 0px;
+  color:#9f2c9d;
 }
 
 .explain {
@@ -349,6 +353,14 @@
   width: 24%;
   margin-top: 8px;
   cursor: pointer;
+  
+}
+
+.listingShortView:hover {
+  box-shadow: #9f2c9d 0px 0px 0px 2px;
+  color: #9f2c9d;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 /* On Mobile, make listingShortView 49% */
