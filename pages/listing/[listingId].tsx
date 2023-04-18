@@ -122,9 +122,22 @@ const ListingPage: NextPage = () => {
 
         <div className={styles.rightListing}>
           <h1>{listing.asset.name}</h1>
-          <p style={{fontSize:'14px', color:'grey', marginTop:'-1rem'}}>{listing.assetContractAddress}</p>
-          <button className={styles.scanButton} onClick={handlePolyScan}>See in Polyscan</button>
-          <p>{listing.asset.description}</p>
+          <div className={styles.listingDetails}>
+            <div className={styles.listingDetail}>
+              <p>Contract Address:</p>
+              <p style={{fontSize:'14px', color:'grey', marginTop:'-1rem'}}>{listing.assetContractAddress}</p>
+              <p>Description:</p>
+              <p style={{fontSize:'14px', color:'grey', marginTop:'-1rem'}}>{listing.asset.description}</p>          
+            </div>
+            <div className={styles.listingDetail} >
+              <p>Listing Type: </p>
+              <p style={{fontSize:'14px', color:'grey', marginTop:'-1rem'}}>{listing.type === 0 ? 'Direct' : 'Auction'}</p>
+              <p>Quantity: </p>
+              <p style={{fontSize:'14px', color:'grey', marginTop:'-1rem'}}>{listing.quantity.toString()}</p>
+            </div>
+
+          </div>
+          <div className={styles.listingDetails}>
           <p>
             Owned by{" "}
             <b>
@@ -133,6 +146,8 @@ const ListingPage: NextPage = () => {
                 listing.sellerAddress?.slice(36, 40)}
             </b>
           </p>
+          <button className={styles.scanButton} onClick={handlePolyScan}>View on Polyscan</button>
+          </div>
           <h2>
             <b>{listing.buyoutCurrencyValuePerToken.displayValue}</b>{" "}
             {listing.buyoutCurrencyValuePerToken.symbol}
@@ -145,6 +160,7 @@ const ListingPage: NextPage = () => {
               gap: 20,
               alignItems: "center",
             }}
+            className={styles.buyAction}
           >
             <button
               style={{ borderStyle: "none" }}
@@ -165,11 +181,14 @@ const ListingPage: NextPage = () => {
             >
 
               <input
-                type="text"
+                type="number"
                 name="bidAmount"
                 className={styles.textInput}
                 onChange={(e) => setBidAmount(e.target.value)}
                 placeholder="Amount"
+                max={listing.quantity.toString()}
+                min={1}
+                defaultValue={1}
                 style={{ marginTop: 0, marginLeft: 0, width: 128 }}
               />
               <button

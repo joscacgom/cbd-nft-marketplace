@@ -3,14 +3,17 @@
   top: 5%;
   left: 5%;
 }
-
-.icon{
-  color:linear-gradient(to left, #cc25b3 0%, #74a2e7 101.52%);
-  cursor:pointer;
+.icon {
+  color: linear-gradient(to left, #cc25b3 0%, #74a2e7 101.52%);
+  cursor: pointer;
   font-size: 36px;
   font-weight: 400;
   font-family: fantasy;
   text-decoration: none;
+}
+
+.icon:visited {
+  color: linear-gradient(to left, #cc25b3 0%, #74a2e7 101.52%);
 }
 
 .btn {
@@ -253,6 +256,7 @@
   position: fixed;
   bottom: 2rem;
   left: 50%;
+  width: 80%;
   transform: translateX(-50%);
   padding: 1rem;
   border-radius: 0.5rem;
@@ -423,8 +427,15 @@
   background-color: #9f2c9d;
   justify-content: center;
   color: #fff;
+  font-size:12px;
+  padding:0.5rem;
   cursor: pointer;
-  
+
+}
+
+.scanButton:hover{
+  color:#9f2c9d;
+  background-color: #fafafa;
 }
  @media (max-width: 768px) {
   .bidInput{
@@ -470,6 +481,45 @@
   justify-content: center;
 }
 
+.listingDetails {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.listingDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+.listingDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0px;
+  }
+
+  .scanButton{
+    margin:0 auto;
+  }
+  .buyAction{
+    margin-left:6rem;
+    margin-bottom: 1rem;
+
+  }
+  .listingDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 900px) {
   .listingContainer {
     flex-direction: column;
