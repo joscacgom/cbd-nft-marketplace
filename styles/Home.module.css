@@ -667,10 +667,17 @@
   background-color: transparent;
   border: 1px solid grey;
   color: #000;
+  text-align: center;
+  line-height: 40px;
 }
 
 .quantityControlButton:disabled {
   opacity: 0.25;
+}
+
+.quantityControlButton:hover {
+  color: #9f2c9d;
+  border: 1px solid #9f2c9d;
 }
 
 .timer {
