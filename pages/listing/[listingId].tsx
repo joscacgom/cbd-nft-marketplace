@@ -83,7 +83,7 @@ const ListingPage: NextPage = () => {
     
     } catch (error:any) {
       console.error(error);
-      handleRenderToast(error.toString(),5000, "error");
+      handleRenderToast("Error creating a bid/offer. Please, check the console for more information",5000, "error");
 
     }
   }
@@ -99,7 +99,7 @@ const ListingPage: NextPage = () => {
       handleRenderToast(`${listing?.type === ListingType.Auction ? "Bid" : "Offer"} created successfully!`,5000, "success")
     } catch (error: any) {
       console.error(error);
-      handleRenderToast(error.toString(),5000, "error")
+      handleRenderToast("Error buying NFTs. Please, check the console for more information",5000, "error")
     }
   }
 

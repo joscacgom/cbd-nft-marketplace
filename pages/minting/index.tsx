@@ -316,7 +316,7 @@ const Mint: NextPage = () => {
                         isDisabled={!canClaim || buttonLoading}
                         onError={(err) => {
                           console.error(err);
-                          handleRenderToast("Error claiming NFTs",5000, "error")
+                          handleRenderToast("Error claiming NFTs. Please, check the console for more information",5000, "error")
 
                         }}
                         onSuccess={() => {

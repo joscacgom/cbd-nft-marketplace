@@ -257,25 +257,36 @@
   text-decoration: none;
 }
 .toastError {
+  display: flex;
+  flex-direction: row;
   position: fixed;
+  align-items: center;  
+  justify-content: flex-start;
   bottom: 2rem;
+  gap: 1rem;
   left: 50%;
-  width: 80%;
+  width: 30%;
   transform: translateX(-50%);
   padding: 1rem;
   border-radius: 0.5rem;
   background-color: crimson;
   color: #fff;
-  opacity: 0;
   font-size: 14px;
   font-weight: 300;
   transition: opacity 0.3s ease-in-out;
 }
 
 .toastSuccess{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  align-items: center;
+  justify-content: flex-start;
   position: fixed;
   bottom: 2rem;
+  gap: 1rem;
   left: 50%;
+  width: 30%;
   background-color: darkgreen;
   transform: translateX(-50%);
   padding: 1rem;
@@ -372,14 +383,16 @@
 
 @media screen and (max-width: 768px) {
  .toastError{
-      width: 100%;
+      width: 80%;
       left: 0;
       transform: translateX(0);
+      font-size: 12px;
     }
   .toastSuccess{
-      width: 100%;
+      width: 80%;
       left: 0;
       transform: translateX(0);
+      font-size: 12px;
     }
  }
 
@@ -509,13 +522,13 @@
 }
 
 @media screen and (max-width: 768px) {
-.listingDetails {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 0px;
-  }
+  .listingDetails {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 0px;
+    }
 
   .scanButton{
     margin:0 auto;

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
+import { ErrorIcon, TickIcon } from "./Icon";
 
 interface ToastProps {
   message: any;
@@ -19,7 +20,8 @@ const Toast: React.FC<ToastProps> = ({ message, duration, type }) => {
   }, [duration]);
 
   return (
-    <div className={`${type == 'error' ? styles.toastError: styles.toastSuccess} ${show ? styles.show : ''}`}>
+    <div className={`${type == "error" ? styles.toastError : styles.toastSuccess} ${show ? styles.show : ""}`}>
+      {type === "error" ? <ErrorIcon size={24} /> : <TickIcon size={24} />}
       <p>{message}</p>
     </div>
   );
