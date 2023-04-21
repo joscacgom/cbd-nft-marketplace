@@ -18,7 +18,6 @@ import { marketplaceContractAddress } from "../../addresses";
 import Toast from "../../components/Toast";
 import styles from "../../styles/Home.module.css";
 import Spinner from "../../components/Spinner";
-import Link from "next/link";
 
 const ListingPage: NextPage = () => {
   const router = useRouter();
