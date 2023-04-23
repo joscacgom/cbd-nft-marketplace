@@ -96,7 +96,7 @@ const ListingPage: NextPage = () => {
       }
 
       await marketplace?.buyoutListing(listingId, 1);
-      handleRenderToast(`${listing?.type === ListingType.Auction ? "Bid" : "Offer"} created successfully!`,5000, "success")
+      handleRenderToast(`${listing?.type === ListingType.Auction ? "Bid" : "Offer/Buy"} created successfully!`,5000, "success")
     } catch (error: any) {
       console.error(error);
       handleRenderToast("Error buying NFTs. Please, check the console for more information",5000, "error")

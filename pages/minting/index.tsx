@@ -213,6 +213,31 @@ const Mint: NextPage = () => {
     quantity,
   ]);
 
+  const mintButtonStyle = {
+  cursor: 'pointer',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  marginBottom: '1rem',
+  verticalAlign: 'middle',
+  outline: '2px solid transparent',
+  outlineOffset: '2px',
+  lineHeight: 1.2,
+  fontWeight: 600,
+  transitionProperty: 'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform',
+  transitionDuration: '200ms',
+  height: '3rem',
+  minWidth: '3rem',
+  fontSize: '1rem',
+  background: '#e5e5ea',
+  backgroundImage: 'linear-gradient(to left, #cc25b3 0%, #418dff 101.52%)',
+  color: '#fff',
+  width: '180px',
+  borderRadius: '9999px',
+  animation: 'gradient 3s ease-in-out infinite',
+  backgroundSize: '200% auto',
+};
+
   function handleRenderToast(message:any, duration:number, type:string) {
     setToastMessage(message);
     setToastDuration(duration);
@@ -311,6 +336,8 @@ const Mint: NextPage = () => {
                       </div>
                     ) : (
                       <Web3Button
+                        className={styles.mainButton}
+                        style={mintButtonStyle}
                         contractAddress={nftDrop?.getAddress() || ""}
                         action={(cntr) => cntr.erc721.claim(quantity)}
                         isDisabled={!canClaim || buttonLoading}

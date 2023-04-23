@@ -1,2 +1,2 @@
 export const marketplaceContractAddress = '0x43c56e0242703BC73189550fD8b15b9220CAC4b8';
-export const myNftDropContractAddress= '0xf6d18a16aa5C9D7b5d6d7C31e8e575d9B314B8D3';
+export const myNftDropContractAddress= '0x6968BaEb1058b0663a7F178725C1fF996F5Cd696';
